@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 4
 
-   Author: 
-   Date:   
+   Author: Jacob Gordon
+   Date:   03/06/19
    
    Filename: vw_results.js
    
@@ -24,17 +24,26 @@
       
 */
 
+var reportHTML = "<h1>" + raceTitle + "</h1>";
 
+for (var i = 0; i <= 7; i++) {
+    var totalVotes = 0;
+    votes[i].forEach(calcSum);
+    reportHTML += "<table> caption>" + race[i] + "</caption><tr><th>" + candidate[i] + "</th><th>" + votes[i] + "</th></tr>";
+    candidateRows(i, totalVotes);
+    reportHTML += candidateRows();
+    reportHTML += "</table";
+};
+document.getElementsByTagName("section")[0].innerHTML = reportHTML;
 
 
 
 /* Callback Function to calculate an array sum */
 function calcSum(value) {
-   totalVotes += value;
+    totalVotes += value;
 }
 
 /* Function to calculate a percentage */
 function calcPercent(value, sum) {
-   return (100*value/sum);
+    return (100 * value / sum);
 }
-
