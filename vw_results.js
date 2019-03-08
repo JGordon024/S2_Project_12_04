@@ -5,7 +5,7 @@
    Tutorial 10
    Case Problem 4
 
-   Author: Caleb Snow
+   Author: Jacob Gordon
    Date:   3/4/19
 
    Filename: vw_results.js
